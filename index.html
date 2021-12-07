@@ -14,23 +14,32 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
-  <div class="hero">
-    <nav class="container nav-bar">
+<body style="pointer-events: none;">
+  <div class="nav-bg none">
+    <div class=" nav-card">
+      <a href="#">About</a>
+      <hr>
+      <a href="#">Discover</a>
+      <hr>
+      <a href="#">Get Started</a>
+    </div>
+  </div>
+  <div class="hero" >
+    <nav class="container nav-bar" >
       <a href=""><img src="/images/logo.svg" alt="" class="logo"></a>
       <ul class="nav-links">
         <li><a href="">About</a></li>
         <li><a href="">Discover</a></li>
         <li><a href="">Get Started</a></li>
       </ul>
-      <a href="#" class="ham">
-        <img src="/images/icon-hamburger.svg" alt="">
-      </a>
+    <h6  class="ham" onclick="showMobileNav()" >
+        <img src="/images/icon-hamburger.svg"  alt="">
+      </h6>
     </nav>
   </div>
 
   <div class="cards">
-    <div class="card centered intro">
+    <div class="card centered intro " >
       <img src="/images/logo-mastercraft.svg" alt="" class="logo-craft">
       <h1 class="head-text">Mastercraft Bamboo Monitor Riser</h1>
       <p class="p-text">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>

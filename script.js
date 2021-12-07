@@ -4,10 +4,17 @@ const sucess = document.getElementsByClassName("Thanks-modal");
 const Cancel = document.getElementsByClassName("cancel");
 const pledges = document.getElementsByClassName("make-pledge");
 const statsHeaders=document.getElementsByClassName('stats-header');
-
+const mobileNav=document.getElementsByClassName('nav-bg')[0];
+// document.getElementsByClassName('ham')[0].addEventListener('onClick',()=>{
+//     showMobileNav()
+// })
+console.log(mobileNav);
 // const progressBar = document.getElementsByClassName("progress-bar")[0];
 const progressLine = document.getElementsByClassName("progress-line")[0];
-
+function showMobileNav() {
+    mobileNav.classList.remove('none');
+    console.log(mobileNav);
+}
 const goal=100_000;
 var currentAmount=52_430;
 // statsHeader.innerHTML='$'+currentAmount.toLocaleString();
@@ -73,9 +80,12 @@ window.onclick = function (event) {
     console.log("clicked");
     pledgeModal[0].classList.add("none");
     close_input();
-  } else if (event.target == sucess[0].parentNode) {
+  } else if (event.target == sucess[0]) {
     // @ts-ignore
-    sucess[0].parentNode.classList.add("none");
+    sucess[0].classList.add("none");
     close_input();
+  }
+  else if(event.target==mobileNav){
+    mobileNav.classList.add('none');
   }
 };

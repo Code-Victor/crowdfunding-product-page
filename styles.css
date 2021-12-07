@@ -13,6 +13,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Commissioner', sans-serif;
+    pointer-events: auto;
 }
 body{
     background-color: rgba(244, 244, 244,0.6);
@@ -29,7 +30,8 @@ body{
     padding: 20px 10px;
     display: flex;
     justify-content: space-between;
-
+    z-index: 10000;
+    pointer-events: auto;
 }
 .nav-links{
     width: 250px;
@@ -45,6 +47,42 @@ body{
 .ham{
     display: none;
 }
+.nav-bg{
+    position: absolute;
+    top:0;
+    right:0;
+    left:0;
+    height:100vh;
+    background:linear-gradient(rgba(0, 0, 0,0.7),rgba(0, 0, 0,0.5),rgba(0, 0, 0,0.4),transparent) ;
+    position: fixed;
+    padding-top: 70px;
+}
+.nav-bg .nav-card{
+    background-color: white;
+    overflow: clip;
+    
+
+    border-radius: 10px;
+    width: 85vw;
+    margin: auto;
+    min-width: 200px;
+    
+}
+
+.nav-card a{
+    text-align: left;
+    display: block;
+    padding: 20px 20px;
+    
+    width: 100%;
+    text-decoration: none;
+    color: rgb(73, 73, 73);
+    font-weight: 600;
+}
+.nav-card a:active{
+    background-color: gainsboro;
+}
+
 
 /* Cards */
 .cards{
@@ -129,7 +167,7 @@ body{
     min-height: 100%;
     border-radius: 20px;
     background-color:hsl(176, 50%, 47%) ;
-    width: 0%;
+    width: 52.43%;
     max-width: 100%;
 }
 
