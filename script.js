@@ -3,17 +3,24 @@ const pledgeModal = document.getElementsByClassName("pledge-modal");
 const sucess = document.getElementsByClassName("Thanks-modal");
 const Cancel = document.getElementsByClassName("cancel");
 const pledges = document.getElementsByClassName("make-pledge");
+const statsHeaders=document.getElementsByClassName('stats-header');
+
 // const progressBar = document.getElementsByClassName("progress-bar")[0];
 const progressLine = document.getElementsByClassName("progress-line")[0];
 
 const goal=100_000;
-var currentAmount=0;
-console.log(progressLine)
+var currentAmount=52_430;
+// statsHeader.innerHTML='$'+currentAmount.toLocaleString();
+statsHeaders[0].innerHTML='$'+currentAmount.toLocaleString();
+console.log()
 function showThankyou(element) {
-    const amountPledged = element.parentNode.children[1].value;
+    const amountPledged = parseInt(element.parentNode.children[1].value);
     currentAmount+=amountPledged;
+    console.log(currentAmount);
     var percentage=currentAmount/goal*100;
     progressLine.style.width=percentage.toString()+'%'
+    statsHeaders[0].innerHTML='$'+currentAmount.toLocaleString();
+    statsHeaders[1].innerHTML=(parseInt(statsHeaders[1].innerHTML.replace(',',''))+1).toLocaleString();
     console.log((percentage));
   sucess[0].classList.remove("none");
   console.log(sucess[0].classList);
