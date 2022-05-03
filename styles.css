@@ -19,7 +19,7 @@ body{
     background-color: rgba(244, 244, 244,0.6);
 }
 .hero{
-    background: linear-gradient(to bottom, rgb(0, 0, 0,0.7),transparent,transparent,transparent),url(/images/image-hero-desktop.jpg) ;
+    background: linear-gradient(to bottom, rgb(0, 0, 0,0.7),transparent,transparent,transparent),url(./images/image-hero-desktop.jpg) ;
     background-size: cover;
     height: 50vh;
     position: relative;
